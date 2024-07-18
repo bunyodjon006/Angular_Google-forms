@@ -1,0 +1,114 @@
+<div class="main" >
+    <div class="form_section">
+        <form  [formGroup]="userform" >
+            <!-- Section-1 start -->
+            <div class="content-1" >
+                <div class="div_blue"></div>
+                <div class="div_title" ><p>Backend Dasturchi Internship</p></div>
+                <div class="div_text"><div class="div_text_text"><p>mirxalilovbunyod009@gmail.com <a href="#">Сменить аккаунт</a> </p> <mat-icon>cloud_done</mat-icon></div>
+            <div class="div_text-2"><p>Когда вы загрузите файлы и отправите форму, мы сохраним ваши имя и фото профиля.. В ответе не будет использован введенный вами адрес электронной почты.</p></div></div>
+            <div class="content_end"><p>*Обязательный вопрос</p>
+            </div>
+            </div>
+            <!-- Section-2 Start -->
+            <div class="content_2">
+                <div class="div_titles"><h3>Ismingiz: <span>*</span></h3></div>
+                <div class="div_input"><input type="text" placeholder="Мой ответ" required  formControlName="name" minlength="6">
+                <div *ngIf="name?.touched && name?.invalid">
+                <!-- <div class="alert alert-danger" *ngIf="name.errors.required">ism kiritish majburiy</div> 
+                <div class="alert alert-danger" *ngIf="name.errors.minlength">eng kamida 6 ta bo'lsin</div>
+                <div class="alert alert-danger" *ngIf="name.errors.maxlength">ko'p bilan 15 kiriting</div> -->
+                <!-- <div *ngIf="name.errors.noSpace">Bo'sh joy mumkin emas</div>   ushbu funksiya qo'lash ixtiyoriy! -->
+            </div></div>
+            </div>
+            <!-- Section-3 Start -->
+            <div class="content_3"><div class="div_titles"><h3>Yoshingiz: <span>*</span></h3></div>
+            <div class="div_input"><input type="text" placeholder="Мой ответ" formControlName="ages">
+            <div *ngIf="ages?.touched && ages?.invalid">
+                <!-- <div class="alert alert-danger" *ngIf="ages?.errors.required">yoshingizni yozing!</div> -->
+            </div>
+        </div>
+    </div>
+            <!-- Section-4 start -->
+            <div class="content_4">
+                <div class="titles_text div_titles"><p>Telefon raqamingiz (iloji bo'lsa telegramdan foydalanadigan raqamingizni qo'yishingizni so'rab qolardik)</p></div>
+                <div class="div_input content-4_input"><input type="number" formControlName="phone" placeholder="Мой ответ" required minlength="8">
+                <div  *ngIf="phone?.touched && phone?.invalid">
+                    <!-- <div class="alert alert-danger" *ngIf="phone?.errors.required">nomer kiritish kerak</div>
+                    <div class="alert alert-danger" *ngIf="phone?.errors.minlength">nomer 8 sondan iborat bo'ladi</div>
+                    <div class="alert alert-danger" *ngIf="phone?.errors.maxlength">nomer ko'p bilan 15 ta harfdan iborat</div> -->
+                </div>
+            </div>
+            </div>
+            <!-- Section-5 start -->
+            <div class="content_5">
+                <div class="titles_text-1_div_titles-1">
+                 <p>Bu ish Toshkentdagi ofisda offline ishlashni talab qiladi, bu maqulmi? <span>*</span></p>   
+                </div>
+                <div class="div_input content-4_input"><input type="text" placeholder="Мой ответ" formControlName="atvet" required>
+                <!-- <div *ngIf="atvet.touched && atvet.invalid">
+                    <div class="alert alert-danger" *ngIf="atvet.errors.required">Sizning fikrlingiz biz uchun muhim kiritish shart</div>
+                </div></div> -->
+            </div>
+            </div>
+            <!-- Section-6 start -->
+            <div class="content_6">
+                <div class="titles_radio">
+                    <p>Ingliz tili bilish darajangiz: <span>*</span></p>
+                </div>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Begginer</mat-radio-button>
+                    <mat-radio-button value="2">A2</mat-radio-button>
+                    <mat-radio-button value="3">B1</mat-radio-button>
+                    <mat-radio-button value="4">B2</mat-radio-button>
+                    <mat-radio-button value="5">C1</mat-radio-button>
+                    <mat-radio-button value="6">C2</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+             <!-- Section-7 start -->
+             <div class="content_6">
+                <div class="titles_radio">
+                    <p>Rus tili bilish darajangiz: <span>*</span></p>
+                </div>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Begginer</mat-radio-button>
+                    <mat-radio-button value="2">A2</mat-radio-button>
+                    <mat-radio-button value="3">B1</mat-radio-button>
+                    <mat-radio-button value="4">B2</mat-radio-button>
+                    <mat-radio-button value="5">C1</mat-radio-button>
+                    <mat-radio-button value="6">C2</mat-radio-button>
+                  </mat-radio-group>
+                  
+            </div>
+            <!-- Section-8 start -->
+            <div class="content_7">
+                <div class="title_texts">
+                    <p>Rezumeni jo'nating: <span>*</span></p>
+                </div>
+                <div class="contents">
+                    <a >
+                        <div class="downloads">
+                         <mat-icon>download</mat-icon> <span> Добавит файл</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Section-9 start -->
+            <div class="content_8">
+                <div class="content_button_modal">
+                    <button (click)="OpenDialog2()"  mat-raised-button color="primary">Отправитъ</button>
+                    <button (click)="OpenDialog1()" mat-stroked-button color="primary">Очистит форму</button>
+                </div>
+                <div class="content_button_text">
+                    <p>Никогда не используйте формы Google для передачи паролей.</p>
+                </div>
+                <div class="content_button_text2">
+                    <p>Компания Google не имеет никакого отношения к этому контенту. Сообщение о нарушении - Условия использования - Политика конфиденциальности</p>
+                </div>
+                <div class="content_button_title2">
+                    <h2>Google Форми</h2>
+                </div>
+            <mat-icon (click)="OpenDialog()" class="chat">chat</mat-icon> </div> </form>  
+    </div>
+</div>
+

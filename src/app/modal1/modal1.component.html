@@ -1,0 +1,78 @@
+<div class="conent_main"><div class="main">
+    <div class="sidebar" >
+        <div class="content_sidebars" *ngIf="expent">
+        <h3>Отправка отзыва о сервисе "Google"   <mat-icon class="close" matDialogClose>close</mat-icon></h3>
+        <img src="https://www.gstatic.com/uservoice/feedback/client/web/live/intent_selection_header.png" alt="photo error!">
+<div (click)="Opensent()" class="sidebar_div">
+    <mat-icon>flag_circle</mat-icon> <p>Собшит о проблема</p>
+</div>
+<div (click)="Openssent()" class="sidebar_div">
+    <mat-icon>lightbulb_circle</mat-icon> <p>Предложит идею</p>
+</div>
+   </div>
+<div class="content_sobshit" *ngIf="expresion">
+    <div class="problem">
+     <mat-icon (click)="Opensents()">arrow_back</mat-icon>   <h4>Собшит о проблема</h4> <mat-icon class="closes" matDialogClose>close</mat-icon>
+    </div>
+    <div class="texts">
+        <p>Что вы пытались сделать, когда столкнулись с этой проблемой?</p>
+    </div>
+    <div class="select">
+        <select name="" id="">
+            <option value="">Вибрат ответ</option>
+            <option value="">Ответ на вапрос</option>
+            <option value="">Сообшит о спаме</option>
+            <option value="">Отправить форму</option>
+            <option value="">Другое</option>
+                  </select>
+    </div>
+    <div class="text_and_textarea">
+        <p>Опишите проблему</p>
+        <textarea name="" id="" cols="40" rows="5" placeholder="  Расскажите,что проишло"></textarea>
+        <div class="texts_and-icons"><p class="text_and-2">Не указывайте конфиденциальную информацию.</p> <mat-icon class="help">help</mat-icon>
+</div>
+<div class="texts_selectos">
+    <p>Если вы добавите скриншот, нам будет проще разобраться в проблеме. (необязательно)</p>
+    <a href="#"> <div class="buttons">
+        <mat-icon>screenshot_monitor</mat-icon>&nbsp;&nbsp; <p>Сделат скреншот</p>
+    </div></a>
+   <div class="input_radio">
+    <mat-checkbox class="example-margin"></mat-checkbox> <p>Мы можем запрашивать у вас дополнительные сведения или сообщать вам об обновлениях по электронной почте</p>
+   </div>
+   <div class="text_end">
+<p>Некоторая <a href="#">информация об аккаунте и системе </a> может быть отправлена в Google. Мы используем ее для устранения неполадок и улучшения наших сервисов, как указано в <a href="#">Политике конфиденциальности</a>  и <a href="#">Условиях использования</a> . Мы можем запросить у вас дополнительные сведения или сообщить об обновлениях по электронной почте. Подать запрос на изменение контента в связи с нарушением законодательства можно через <a href="#"> центр правовой поддержки</a>.</p>
+   </div>
+</div>
+       <div class="end_buttons">
+        <button mat-raised-button color="black">Отправитъ</button>
+      
+       </div> 
+    </div>
+    <!-- New Modal  -->
+</div> <div *ngIf="experiment" class="content_predlojit">
+    <div class="problem">
+        <mat-icon (click)="Opensentss()">arrow_back</mat-icon>   <h4>Предложит идею</h4> <mat-icon class="closes" matDialogClose>close</mat-icon>
+       </div>
+       <p class="opshite">Опишите свое предложение</p>
+        <textarea name="" id="" cols="40" rows="5" placeholder="  Расскажите, как можно улучшить наш продукт"></textarea>
+        <div class="texts_and-iconss"><p class="text_and-2s">Не указывайте конфиденциальную информацию.</p> <mat-icon class="helps">help</mat-icon>
+</div>
+<div class="text_center">
+    <p>Если вы добавите скриншот, нам будет проще понять вашу идею. (необязательно)</p>
+</div>
+<a href="#"><div class="content_button">
+ <mat-icon>screenshot_monitor</mat-icon>&nbsp;&nbsp; <p>Сделат скреншот</p>
+</div></a>
+<div class="input_radio">
+    <mat-checkbox class="example-margin"></mat-checkbox> <p>Мы можем запрашивать у вас дополнительные сведения или сообщать вам об обновлениях по электронной почте</p>
+   </div>
+   <div class="texts_ends">
+<p>Некоторая информация об аккаунте и системе может быть отправлена в Google. Мы используем ее для устранения неполадок и улучшения наших сервисов, как указано в Политике конфиденциальности и Условиях использования. Мы можем запросить у вас дополнительные сведения или сообщить об обновлениях по электронной почте. Подать запрос на изменение контента в связи с нарушением законодательства можно через центр правовой поддержки.</p>
+   </div>
+   <div class="end_buttons buttons-divs">
+    <button mat-raised-button color="black">Отправитъ</button>
+  
+   </div> 
+</div>
+</div>
+</div>
